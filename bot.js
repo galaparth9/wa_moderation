@@ -20,7 +20,7 @@ const config = {
     dbName: 'whatsapp_moderation'
   },
   bot: {
-    maxWarnings: 5,
+    maxWarnings: 50,
     contextMessages: 30,
     warningCooldown: 60,
     maxDecryptionRetries: 3,
@@ -673,7 +673,7 @@ You are a content moderation system for a WhatsApp group. Analyze the following 
 
 1. Abusive language or personal attacks (including slang in English, Hindi, or Hinglish)
 2. Expressions of anger, hostility, or aggression in any manner (in any of the three languages)
-3. Political content, debates, or politically charged discussions
+3. Political content, debates, or politically charged discussions regarding any political party, leader, or ideology
 4. Religious content, discussions,or insult
 
 The messages may be written in English, Hindi, or Hinglish (a mix of both). Understand the **intent, tone, and meaning** behind the words, even if slang, shorthand, or transliteration is used.
