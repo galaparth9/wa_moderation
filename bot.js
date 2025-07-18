@@ -20,7 +20,7 @@ const config = {
     dbName: 'whatsapp_moderation'
   },
   bot: {
-    maxWarnings: 50,
+    maxWarnings: 5,
     contextMessages: 30,
     warningCooldown: 60,
     maxDecryptionRetries: 3,
