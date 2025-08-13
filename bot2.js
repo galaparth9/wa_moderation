@@ -609,19 +609,16 @@ Ready to moderate! 🛡️`
       console.log(`📋 Group participants update: ${action} in ${groupId}`, participants.map(p => p.split('@')[0]))
       
       if (action === 'add') {
-        // Check if bot was just added to this group
         const botNumber = this.sock.user?.id?.split(':')[0] + '@s.whatsapp.net'
         console.log(`🤖 Bot number: ${botNumber}`)
         console.log(`👥 Added participants:`, participants)
         
         if (participants.includes(botNumber)) {
           console.log(`🎯 Bot was added to group: ${groupId}`)
-          // Add delay to ensure bot has proper access
           setTimeout(async () => {
             await this.handleBotAddedToGroup(groupId)
           }, 3000) // 3 second delay
         } else {
-          // Handle regular user additions
           for (const participant of participants) {
             await this.handleUserReAdded(groupId, participant)
           }
@@ -638,7 +635,6 @@ Ready to moderate! 🛡️`
     try {
       console.log(`🔍 Bot added to group: ${groupId}`)
       
-      // Try to get group metadata with retries
       let groupInfo = null
       let groupName = null
       
